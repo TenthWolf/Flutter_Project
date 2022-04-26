@@ -10,7 +10,7 @@ class AnimalProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 500,
-      width: 250,
+      width: 200,
       padding: const EdgeInsets.symmetric(vertical: 7),
       child: Stack(
         children: [
@@ -24,7 +24,7 @@ class AnimalProfile extends StatelessWidget {
           Positioned(
             child: Container(
               height: 50,
-              width: 300,
+              width: 200,
               decoration: const ShapeDecoration(
                 color: Colors.white12,
                 shape: RoundedRectangleBorder(

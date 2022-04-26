@@ -22,7 +22,7 @@ class _CardsState extends State<Cards> {
         name: 'Rufus', breed: 'Rabbit', picture: 'assets/images/rabbit.png'),
   ];
 
-  ValueNotifier<Swipe> swipeNotifier = ValueNotifier(Swipe.none);
+  ValueNotifier<Drag> dragNotifier = ValueNotifier(Drag.none);
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class _CardsState extends State<Cards> {
         ClipRRect(
           borderRadius: BorderRadius.circular(10),
           child: ValueListenableBuilder(
-            valueListenable: swipeNotifier,
+            valueListenable: dragNotifier,
             builder: (context, swipe, _) => Stack(
               clipBehavior: Clip.none,
               alignment: Alignment.center,
@@ -40,7 +40,7 @@ class _CardsState extends State<Cards> {
                 return DragPicture(
                   animals: dragPicture[index],
                   num: index,
-                  swipeNotify: swipeNotifier,
+                  swipeNotify: dragNotifier,
                 );
               }),
             ),
@@ -56,7 +56,7 @@ class _CardsState extends State<Cards> {
             ) {
               return IgnorePointer(
                 child: Container(
-                  height: 700.0,
+                  height: 400.0,
                   width: 80.0,
                   color: Colors.transparent,
                 ),
@@ -79,7 +79,7 @@ class _CardsState extends State<Cards> {
             ) {
               return IgnorePointer(
                 child: Container(
-                  height: 700.0,
+                  height: 400.0,
                   width: 80.0,
                   color: Colors.transparent,
                 ),

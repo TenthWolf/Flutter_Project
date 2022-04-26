@@ -23,4 +23,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-enum Swipe { left, right, none }
+enum Drag { left, right, none }
